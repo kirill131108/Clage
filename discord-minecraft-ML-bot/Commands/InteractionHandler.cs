@@ -7,18 +7,18 @@ namespace Bot
     class InteractionHandler
     {
             private readonly DiscordSocketClient _client;
-            private readonly InteractionService _service;
-            private readonly IServiceProvider _provider;
-        public InteractionHandler(DiscordSocketClient client, InteractionService service, IServiceProvider provider)
+            private readonly InteractionService _commands;
+            private readonly IServiceProvider _services;
+        public InteractionHandler(DiscordSocketClient client, InteractionService commands, IServiceProvider services)
         {
             _client = client;
-            _service = service;
-            _provider = provider;
+            _commands = commands;
+            _services = services;
         }
 
-        public async Task InitilizeAsync()
+        public async Task InitializeAsync()
         {
-            await _service.AddModulesAsync(Assembly.GetEntryAssembly(), _provider);
+            await _commands.AddModulesAsync(Assembly.GetEntryAssembly(), _services);
 
             _client.InteractionCreated += HandleInteraction;
         }
@@ -27,12 +27,12 @@ namespace Bot
             try
             {
                 var ctx = new SocketInteractionContext(_client, arg);
-                await _service.ExecuteCommandAsync(ctx, _provider);
+                await _commands.ExecuteCommandAsync(ctx, _services);
             }
             catch (Exception ex)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine(ex);
+                Console.WriteLine(ex.ToString());
                 Console.ForegroundColor = ConsoleColor.White;
             }
         }

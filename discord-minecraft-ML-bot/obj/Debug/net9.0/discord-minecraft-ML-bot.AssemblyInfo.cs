@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("discord-minecraft-ML-bot")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aa82e3fcd238fc643d708de48cb2af571c20ce4f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6c1653bf8232b0257136ac7e1c59f99a797658d6")]
 [assembly: System.Reflection.AssemblyProductAttribute("discord-minecraft-ML-bot")]
 [assembly: System.Reflection.AssemblyTitleAttribute("discord-minecraft-ML-bot")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

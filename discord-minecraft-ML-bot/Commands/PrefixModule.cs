@@ -2,8 +2,12 @@ using Discord.Commands;
 
 namespace Bot
 {
-    class PrefixModule : ModuleBase<SocketCommandContext>
+    public class PrefixModule : ModuleBase<SocketCommandContext>
     {
-        
+        [Command("ping")]
+        public async Task PONK()
+        {
+            await ReplyAsync("PONG");
+        }
     }
 }

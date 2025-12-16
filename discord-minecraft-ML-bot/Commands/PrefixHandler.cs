@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using Discord.Commands;
 using Discord.WebSocket;
 using Microsoft.Extensions.Configuration;
@@ -17,7 +18,7 @@ namespace Bot
             _config = config;
         }
 
-        public async Task InitilizeAsync()
+        public async Task InitializeAsync()
         {
             _client.MessageReceived += HandleCommandAsync;
         }
@@ -27,19 +28,19 @@ namespace Bot
             _command.AddModuleAsync<T>(null);
         }
 
-        private async Task HandleCommandAsync(SocketMessage msg)
+        private async Task HandleCommandAsync(SocketMessage messageParam)
         {
-            var message = msg as SocketUserMessage;
+            var message = messageParam as SocketUserMessage;
 
             if (message == null) return;
 
-            int ArgPos = 0;
+            int argPos = 0;
 
-            if (!(message.HasCharPrefix(_config["prefix"]![0], ref ArgPos)) || !message.HasMentionPrefix(_client.CurrentUser, ref ArgPos) || message.Author.IsBot) return;
+            if ((!message.HasCharPrefix(_config["prefix"][0], ref argPos)) || !message.HasMentionPrefix(_client.CurrentUser, ref argPos) || message.Author.IsBot) return;
             
             var context = new SocketCommandContext(_client, message);
 
-            await _command.ExecuteAsync(context: context, argPos: ArgPos, services: null);
+            await _command.ExecuteAsync(context: context, argPos: argPos, services: null);
         }
     }
 }

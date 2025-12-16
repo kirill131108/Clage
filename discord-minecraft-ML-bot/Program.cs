@@ -48,11 +48,11 @@ namespace Bot
             var _client = serviceProvider.GetRequiredService<DiscordSocketClient>();
 
             var sCommands = serviceProvider.GetRequiredService<InteractionService>();
-            await serviceProvider.GetRequiredService<InteractionHandler>().InitilizeAsync();
+            await serviceProvider.GetRequiredService<InteractionHandler>().InitializeAsync();
             var config = serviceProvider.GetRequiredService<IConfigurationRoot>();
             var pCommands = serviceProvider.GetRequiredService<PrefixHandler>();
             pCommands.AddModule<PrefixModule>();
-            await pCommands.InitilizeAsync();
+            await pCommands.InitializeAsync();
 
 
             _client.Log += async (LogMessage msg) =>
@@ -62,11 +62,17 @@ namespace Bot
                 await Task.CompletedTask;
                 Console.ForegroundColor = ConsoleColor.White;
             };
+            sCommands.Log += async (LogMessage msg) =>
+            {
+                Console.ForegroundColor = ConsoleColor.Green;  
+                Console.WriteLine(msg.ToString());
+                await Task.CompletedTask;
+                Console.ForegroundColor = ConsoleColor.White;
+            };
             _client.Ready += async () =>
             {
                 Console.WriteLine("Bot Start");  
-                await sCommands.RegisterCommandsToGuildAsync(UInt64.Parse(config["testGuild"]!));
-                await Task.CompletedTask;
+                await sCommands.RegisterCommandsToGuildAsync(ulong.Parse(config["testGuild"]!));
             }; 
 
             await _client.LoginAsync(TokenType.Bot, config["tokens:discord"]);
@@ -75,7 +81,6 @@ namespace Bot
             Console.ReadLine();
 
             await _client.StopAsync();
-            await Task.Delay(5000);
         }
     }
 }
