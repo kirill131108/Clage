@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "z9Vs3GKJLok=",
+  "dgSpecHash": "gbxO3CPmPyE=",
   "success": true,
   "projectFilePath": "C:\\kirill\\code\\C#\\Discord--minecraft-bot\\discord-minecraft-ML-bot\\discord-minecraft-ML-bot.csproj",
   "expectedPackageFiles": [
@@ -20,6 +20,7 @@
     "C:\\Users\\89529\\.nuget\\packages\\microsoft.extensions.configuration.fileextensions\\10.0.1\\microsoft.extensions.configuration.fileextensions.10.0.1.nupkg.sha512",
     "C:\\Users\\89529\\.nuget\\packages\\microsoft.extensions.configuration.json\\10.0.1\\microsoft.extensions.configuration.json.10.0.1.nupkg.sha512",
     "C:\\Users\\89529\\.nuget\\packages\\microsoft.extensions.configuration.usersecrets\\10.0.1\\microsoft.extensions.configuration.usersecrets.10.0.1.nupkg.sha512",
+    "C:\\Users\\89529\\.nuget\\packages\\microsoft.extensions.configuration.yaml\\2.0.0-preview2\\microsoft.extensions.configuration.yaml.2.0.0-preview2.nupkg.sha512",
     "C:\\Users\\89529\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\10.0.1\\microsoft.extensions.dependencyinjection.10.0.1.nupkg.sha512",
     "C:\\Users\\89529\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.1\\microsoft.extensions.dependencyinjection.abstractions.10.0.1.nupkg.sha512",
     "C:\\Users\\89529\\.nuget\\packages\\microsoft.extensions.diagnostics\\10.0.1\\microsoft.extensions.diagnostics.10.0.1.nupkg.sha512",
@@ -59,7 +60,8 @@
     "C:\\Users\\89529\\.nuget\\packages\\system.text.encodings.web\\10.0.1\\system.text.encodings.web.10.0.1.nupkg.sha512",
     "C:\\Users\\89529\\.nuget\\packages\\system.text.json\\10.0.1\\system.text.json.10.0.1.nupkg.sha512",
     "C:\\Users\\89529\\.nuget\\packages\\system.threading.channels\\9.0.4\\system.threading.channels.9.0.4.nupkg.sha512",
-    "C:\\Users\\89529\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512"
+    "C:\\Users\\89529\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
+    "C:\\Users\\89529\\.nuget\\packages\\yamldotnet\\4.2.1\\yamldotnet.4.2.1.nupkg.sha512"
   ],
   "logs": []
 }

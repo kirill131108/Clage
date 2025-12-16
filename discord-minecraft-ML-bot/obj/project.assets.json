@@ -303,6 +303,23 @@
           "buildTransitive/net8.0/Microsoft.Extensions.Configuration.UserSecrets.targets": {}
         }
       },
+      "Microsoft.Extensions.Configuration.Yaml/2.0.0-preview2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.FileExtensions": "2.0.0-preview2-final",
+          "YamlDotNet": "4.2.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Yaml.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Yaml.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.DependencyInjection/10.0.1": {
         "type": "package",
         "dependencies": {
@@ -1180,6 +1197,19 @@
         "runtime": {
           "lib/netcoreapp2.0/_._": {}
         }
+      },
+      "YamlDotNet/4.2.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.3/YamlDotNet.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard1.3/YamlDotNet.dll": {
+            "related": ".xml"
+          }
+        }
       }
     }
   },
@@ -1630,6 +1660,19 @@
         "microsoft.extensions.configuration.usersecrets.10.0.1.nupkg.sha512",
         "microsoft.extensions.configuration.usersecrets.nuspec",
         "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.Configuration.Yaml/2.0.0-preview2": {
+      "sha512": "DQlb6MYOZ5l5XBoZsUu83jYR7Fr3VsgkkCGPTFMPsJQQEIBDMluYLm7WK24p5cQk2Phw9rNL914SPXzQABlE+Q==",
+      "type": "package",
+      "path": "microsoft.extensions.configuration.yaml/2.0.0-preview2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Yaml.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Yaml.xml",
+        "microsoft.extensions.configuration.yaml.2.0.0-preview2.nupkg.sha512",
+        "microsoft.extensions.configuration.yaml.nuspec"
       ]
     },
     "Microsoft.Extensions.DependencyInjection/10.0.1": {
@@ -2930,11 +2973,30 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "YamlDotNet/4.2.1": {
+      "sha512": "z0QLgu/ngx+yKHhqUGEmwisBzUU9z+wWaTTROUMHYKqa3swokw7adsprYhwB/+YoO+E8PXwjLmT1uOXhLFD7WQ==",
+      "type": "package",
+      "path": "yamldotnet/4.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/YamlDotNet.dll",
+        "lib/net35/YamlDotNet.xml",
+        "lib/netstandard1.3/YamlDotNet.dll",
+        "lib/netstandard1.3/YamlDotNet.xml",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/YamlDotNet.dll",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/YamlDotNet.xml",
+        "yamldotnet.4.2.1.nupkg.sha512",
+        "yamldotnet.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
       "Discord.Net >= 3.18.0",
+      "Microsoft.Extensions.Configuration >= 10.0.1",
+      "Microsoft.Extensions.Configuration.Yaml >= 2.0.0-preview2",
       "Microsoft.Extensions.DependencyInjection >= 10.0.1",
       "Microsoft.Extensions.Hosting >= 10.0.1",
       "Microsoft.ML >= 5.0.0"
@@ -2986,6 +3048,14 @@
           "Discord.Net": {
             "target": "Package",
             "version": "[3.18.0, )"
+          },
+          "Microsoft.Extensions.Configuration": {
+            "target": "Package",
+            "version": "[10.0.1, )"
+          },
+          "Microsoft.Extensions.Configuration.Yaml": {
+            "target": "Package",
+            "version": "[2.0.0-preview2, )"
           },
           "Microsoft.Extensions.DependencyInjection": {
             "target": "Package",
