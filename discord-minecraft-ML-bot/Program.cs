@@ -76,7 +76,7 @@ namespace Bot
             _client.MessageReceived += async (SocketMessage msg) =>
             {
                 Console.WriteLine($"{msg.Author.GlobalName} -> {msg.Content}");
-                ML_model.ExecuteAsync(msg.Content);
+                await ML_model.ExecuteAsync(msg.Content);
                 
                 await Task.CompletedTask;
             };

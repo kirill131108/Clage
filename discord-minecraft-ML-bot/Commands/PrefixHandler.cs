@@ -21,6 +21,8 @@ namespace Bot
         public async Task InitializeAsync()
         {
             _client.MessageReceived += HandleCommandAsync;
+
+            await Task.CompletedTask;
         }
 
         public void AddModule<T>()

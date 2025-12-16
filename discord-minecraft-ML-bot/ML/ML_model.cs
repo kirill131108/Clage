@@ -4,11 +4,11 @@ namespace Bot
 {
     public class ML_model
     {
-        public static void ExecuteAsync(string message)
+        public static async Task ExecuteAsync(string message)
         {
             var ctx = new MLContext();
 
-            IDataView dataView = ctx.Data.LoadFromTextFile<InputData>("data.csv", hasHeader: false, separatorChar: ';');
+            IDataView dataView = ctx.Data.LoadFromTextFile<InputData>("configure/data.csv", hasHeader: false, separatorChar: ';');
 
             var trainsplitdata = ctx.Data.TrainTestSplit(dataView, 0.2);
             IDataView trainingData = trainsplitdata.TrainSet; 
@@ -35,17 +35,19 @@ namespace Bot
             var result = predEngine.Predict(context);
 
             Console.WriteLine(result.Score);
+            Console.WriteLine(metrics.Accuracy);
 
             if (result.Score >= 3)
             {
-                File.AppendAllText("data.csv", $"1{message}");
-            } else if (result.Score <= -3)
+                File.AppendAllText("configure/data.csv", $"\n1;{message}");
+            } else if (result.Score <= -2)
             {
-                File.AppendAllText("data.csv", $"0{message}");
+                File.AppendAllText("configure/data.csv", $"\n0;{message}");
             } else
             {
                 return;
             }
+            await Task.CompletedTask;
         }
     }
 }
