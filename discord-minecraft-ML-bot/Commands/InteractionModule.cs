@@ -45,6 +45,7 @@ namespace Bot
 
             ulong channelID = 1445785880500506758;
             var channel = Context.Client.GetChannel(channelID) as IMessageChannel;
+            if (channel == null) return;
 
             await channel.SendMessageAsync($"1 - {message_v1} \n 2 - {message_v2} \n 3 - {message_v3} \n 4 - {message_v4} \n 5 - {Context.User.Id}");
         }

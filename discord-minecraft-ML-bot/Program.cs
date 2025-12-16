@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using Discord;
+﻿using Discord;
 using Discord.WebSocket;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -74,6 +73,13 @@ namespace Bot
                 Console.WriteLine("Bot Start");  
                 await sCommands.RegisterCommandsToGuildAsync(ulong.Parse(config["testGuild"]!));
             }; 
+            _client.MessageReceived += async (SocketMessage msg) =>
+            {
+                Console.WriteLine($"{msg.Author.GlobalName} -> {msg.Content}");
+                ML_model.ExecuteAsync(msg.Content);
+                
+                await Task.CompletedTask;
+            };
 
             await _client.LoginAsync(TokenType.Bot, config["tokens:discord"]);
             await _client.StartAsync();
