@@ -33,7 +33,6 @@ namespace Bot
             Console.WriteLine("Модал работает");
             await RespondWithModalAsync<DemoModal>("tiket");
         }
-
         [ModalInteraction("tiket")]
         public async Task HandleModalInput(DemoModal demo)
         {

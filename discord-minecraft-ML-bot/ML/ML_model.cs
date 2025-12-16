@@ -1,10 +1,12 @@
+using Discord;
 using Microsoft.ML;
 
 namespace Bot
 {
     public class ML_model
     {
-        public static async Task ExecuteAsync(string message)
+        public static bool hasDuplicate = true;
+        public static async Task ExecuteAsync(string message, ulong messageID, ITextChannel channel)
         {
             var ctx = new MLContext();
 
@@ -37,14 +39,33 @@ namespace Bot
             Console.WriteLine(result.Score);
             Console.WriteLine(metrics.Accuracy);
 
-            if (result.Score >= 3)
+            string[] datacsvLines = File.ReadAllLines("configure/data.csv");
+            for (int i = 0; i < datacsvLines.Length; i++)
+                {
+                    if (datacsvLines[i] == $"1;{message}" || datacsvLines[i] == $"0;{message}")
+                    {
+                        hasDuplicate = true;
+                        Console.WriteLine("Yes" + hasDuplicate);
+                    }
+                }
+
+            if (result.Score >= 2)
             {
-                if (File.ReadAllText("configure/data.csv") == $"1;{message}") return;
-                else File.AppendAllText("configure/data.csv", $"\n1;{message}");
+                if (hasDuplicate == false)
+                {
+                    File.AppendAllText("configure/data.csv", $"\n1;{message}");
+                } else
+                {
+                    Console.WriteLine("Is Duplicate");
+                }
+                if (channel != null) 
+                await channel.DeleteMessageAsync(messageID);
             } else if (result.Score <= -2)
             {
-                if (File.ReadAllText("configure/data.csv") == $"0;{message}") return;
-                else File.AppendAllText("configure/data.csv", $"\n0;{message}");
+                if (hasDuplicate == false)
+                {
+                    File.AppendAllText("configure/data.csv", $"\n0;{message}");
+                }
             } else
             {
                 return;

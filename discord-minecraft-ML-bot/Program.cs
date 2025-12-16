@@ -53,6 +53,7 @@ namespace Bot
             var pCommands = serviceProvider.GetRequiredService<PrefixHandler>();
             pCommands.AddModule<PrefixModule>();
             await pCommands.InitializeAsync();
+            
 
 
             _client.Log += async (LogMessage msg) =>
@@ -77,7 +78,8 @@ namespace Bot
             _client.MessageReceived += async (SocketMessage msg) =>
             {
                 Console.WriteLine($"{msg.Author.GlobalName} -> {msg.Content}");
-                await ML_model.ExecuteAsync(msg.Content);
+                if (msg.Channel is ITextChannel textChannel)
+                await ML_model.ExecuteAsync(msg.Content, msg.Id, textChannel);
             };
 
             await _client.LoginAsync(TokenType.Bot, config["tokens:discord"]);
