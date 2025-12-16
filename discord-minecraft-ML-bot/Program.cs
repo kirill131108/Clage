@@ -15,6 +15,7 @@ namespace Bot
 
         public async Task StartAsync()
         {
+            
             var config = new ConfigurationBuilder()
             .SetBasePath(AppContext.BaseDirectory)
             .AddYamlFile("config.yml")
@@ -77,8 +78,6 @@ namespace Bot
             {
                 Console.WriteLine($"{msg.Author.GlobalName} -> {msg.Content}");
                 await ML_model.ExecuteAsync(msg.Content);
-                
-                await Task.CompletedTask;
             };
 
             await _client.LoginAsync(TokenType.Bot, config["tokens:discord"]);

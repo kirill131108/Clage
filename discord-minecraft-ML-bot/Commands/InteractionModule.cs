@@ -1,6 +1,5 @@
 using Discord;
 using Discord.Interactions;
-using Microsoft.Extensions.Configuration;
 
 namespace Bot
 {
