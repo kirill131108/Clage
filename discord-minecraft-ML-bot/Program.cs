@@ -1,2 +1,14 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using System.Threading.Tasks;
+
+namespace Bot
+{
+    class Program
+    {
+        public static async Task Main(String[] args) => await new Program().StartAsync();
+
+        public async Task StartAsync()
+        {
+            
+        }
+    }
+}
