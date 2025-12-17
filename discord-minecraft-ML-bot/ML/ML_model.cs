@@ -1,16 +1,23 @@
 using Discord;
 using Microsoft.ML;
+using MongoDB.Driver;
 
 namespace Bot
 {
     public class ML_model
     {
-        public static bool hasDuplicate = true;
         public static async Task ExecuteAsync(string message, ulong messageID, ITextChannel channel)
         {
+            var client = new MongoClient("mongodb://localhost:27017");
+            var dataBase = client.GetDatabase("test");
+            var collection = dataBase.GetCollection<InputData>("data");
+
+            var enumereable = collection.Find(_ => true).ToList();
+            var hasDuplicate = collection.Find(x => x.Message == message).Any();
+
             var ctx = new MLContext();
 
-            IDataView dataView = ctx.Data.LoadFromTextFile<InputData>("configure/data.csv", hasHeader: false, separatorChar: ';');
+            IDataView dataView = ctx.Data.LoadFromEnumerable<InputData>(enumereable);
 
             var trainsplitdata = ctx.Data.TrainTestSplit(dataView, 0.2);
             IDataView trainingData = trainsplitdata.TrainSet;
@@ -33,7 +40,7 @@ namespace Bot
                 Message = message
             };
 
-
+            
             var result = predEngine.Predict(context);
 
             Console.WriteLine(result.Score);
@@ -53,7 +60,8 @@ namespace Bot
             {
                 if (hasDuplicate == false)
                 {
-                    File.AppendAllText("configure/data.csv", $"\n1;{message}");
+                    var resultInsert = dataBase.GetCollection<InputData>("data");
+                    resultInsert.InsertOne(new InputData { Message = message, Label = false});
                 } else
                 {
                     Console.WriteLine("Is Duplicate");
@@ -64,10 +72,12 @@ namespace Bot
             {
                 if (hasDuplicate == false)
                 {
-                    File.AppendAllText("configure/data.csv", $"\n0;{message}");
+                    var resultInsert = dataBase.GetCollection<InputData>("data");
+                    resultInsert.InsertOne(new InputData { Message = message, Label = false});
                 }
             } else
             {
+                hasDuplicate = false;
                 return;
             }
             await Task.CompletedTask;
