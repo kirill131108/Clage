@@ -103,3 +103,4 @@ C:\kirill\code\C#\Discord--minecraft-bot\discord-minecraft-ML-bot\bin\Debug\net9
 C:\kirill\code\C#\Discord--minecraft-bot\discord-minecraft-ML-bot\bin\Debug\net9.0\StackExchange.Redis.dll
 C:\kirill\code\C#\Discord--minecraft-bot\discord-minecraft-ML-bot\bin\Debug\net9.0\System.IO.Hashing.dll
 C:\kirill\code\C#\Discord--minecraft-bot\discord-minecraft-ML-bot\bin\Debug\net9.0\ZstdSharp.dll
+C:\kirill\code\C#\Discord--minecraft-bot\discord-minecraft-ML-bot\bin\Debug\net9.0\Telegram.Bot.dll

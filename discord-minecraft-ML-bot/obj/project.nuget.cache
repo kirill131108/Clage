@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wIl5WDFZuMI=",
+  "dgSpecHash": "CI7YmiqKKmo=",
   "success": true,
   "projectFilePath": "C:\\kirill\\code\\C#\\Discord--minecraft-bot\\discord-minecraft-ML-bot\\discord-minecraft-ML-bot.csproj",
   "expectedPackageFiles": [
@@ -81,6 +81,7 @@
     "C:\\Users\\89529\\.nuget\\packages\\system.text.json\\10.0.1\\system.text.json.10.0.1.nupkg.sha512",
     "C:\\Users\\89529\\.nuget\\packages\\system.threading.channels\\9.0.4\\system.threading.channels.9.0.4.nupkg.sha512",
     "C:\\Users\\89529\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
+    "C:\\Users\\89529\\.nuget\\packages\\telegram.bot\\22.7.6\\telegram.bot.22.7.6.nupkg.sha512",
     "C:\\Users\\89529\\.nuget\\packages\\yamldotnet\\4.2.1\\yamldotnet.4.2.1.nupkg.sha512",
     "C:\\Users\\89529\\.nuget\\packages\\zstdsharp.port\\0.7.3\\zstdsharp.port.0.7.3.nupkg.sha512"
   ],

@@ -11,7 +11,10 @@ namespace Bot
 {
     class Program
     {
-        public static async Task Main(String[] args) => await new Program().StartAsync();
+        public static async Task Main(String[] args)
+        {
+            _ = new Program().StartAsync();
+        }
 
         public async Task StartAsync()
         {
@@ -53,8 +56,8 @@ namespace Bot
             var pCommands = serviceProvider.GetRequiredService<PrefixHandler>();
             pCommands.AddModule<PrefixModule>();
             await pCommands.InitializeAsync();
-            
 
+            _ = ML_model.RunTrainModel();
 
             _client.Log += async (LogMessage msg) =>
             {

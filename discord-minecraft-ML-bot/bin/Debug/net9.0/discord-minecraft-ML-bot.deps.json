@@ -17,7 +17,8 @@
           "MongoDB.Driver": "3.5.2",
           "Redis": "1.0.3",
           "ServiceStack": "10.0.4",
-          "StackExchange.Redis": "2.10.1"
+          "StackExchange.Redis": "2.10.1",
+          "Telegram.Bot": "22.7.6"
         },
         "runtime": {
           "discord-minecraft-ML-bot.dll": {}
@@ -954,6 +955,18 @@
       },
       "System.Threading.Channels/9.0.4": {},
       "System.ValueTuple/4.5.0": {},
+      "Telegram.Bot/22.7.6": {
+        "dependencies": {
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "10.0.1",
+          "System.Text.Json": "10.0.1"
+        },
+        "runtime": {
+          "lib/net6.0/Telegram.Bot.dll": {
+            "assemblyVersion": "22.7.6.0",
+            "fileVersion": "22.7.6.0"
+          }
+        }
+      },
       "YamlDotNet/4.2.1": {
         "runtime": {
           "lib/netstandard1.3/YamlDotNet.dll": {
@@ -1516,6 +1529,13 @@
       "sha512": "sha512-okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
       "path": "system.valuetuple/4.5.0",
       "hashPath": "system.valuetuple.4.5.0.nupkg.sha512"
+    },
+    "Telegram.Bot/22.7.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3GiyPd7vSMK9s5VmuQLKotROxuP42tsKVDaRC6dgIgD/VyKKdDK5z6uPXn/nJuHTUIXKjtU6i31iPcr6LVJbHw==",
+      "path": "telegram.bot/22.7.6",
+      "hashPath": "telegram.bot.22.7.6.nupkg.sha512"
     },
     "YamlDotNet/4.2.1": {
       "type": "package",
