@@ -29,6 +29,8 @@ name Colection - data
 
 use data.csv in configure as exemple
 
+p.s 1 - isn't good, 0 - is good
+
 <h1>How to start?</h1>
 
 <h2>Linux and macOS</h2>
