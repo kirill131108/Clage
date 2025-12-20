@@ -5,6 +5,7 @@ A Discord bot that deletes hostile messages, but does not delete words that expr
 
 <h1>How to install</h1>
 
+<h2>Linux and macOS</h2>
 clone git repository
 go in discord-minecraft-ML-bot
 
