@@ -18,6 +18,8 @@ edit Discord--minecraft-bot\discord-minecraft-ML-bot\bin\Release\net9.0\win-x64\
 
 
 
+<h2>mongoDB</h2>
+
 Install mongoDB compas - create a DB to localhost:27017
 
 name DB - test
