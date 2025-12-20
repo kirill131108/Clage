@@ -12,6 +12,7 @@ edit Discord--minecraft-bot\discord-minecraft-ML-bot\bin\Debug\net9.0\config.yml
 
 <h2>windows </h2>
 install repository
+
 edit Discord--minecraft-bot\discord-minecraft-ML-bot\bin\Release\net9.0\win-x64\publish\config.yml
 
 
@@ -30,12 +31,19 @@ use data.csv in configure as exemple
 <h1>How to start?</h1>
 
 <h2>Linux and macOS</h2>
+
 open console
+
 Go to the directory with the bot
+
 cd discord-minecraft-ML-bot/
+
 dotnet run
 
 <h2>Windows</h2>
+
 Go to the directory with the bot
+
 go to Discord--minecraft-bot\discord-minecraft-ML-bot\bin\Release\net9.0\win-x64\publish\
+
 run discord-minecraft-ML-bot.exe
