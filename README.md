@@ -3,7 +3,7 @@
 
 A Discord bot that deletes hostile messages, but does not delete words that express surprise through swearing, etc.
 
-#How to use
+<h1>How to use</h1>
 
 clone git repository
 go in discord-minecraft-ML-bot
