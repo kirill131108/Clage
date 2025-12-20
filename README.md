@@ -3,16 +3,15 @@
 
 A Discord bot that deletes hostile messages, but does not delete words that express surprise through swearing, etc.
 
-<h1>How to use</h1>
+<h1>How to install</h1>
 
 clone git repository
 go in discord-minecraft-ML-bot
 
-edit C:\kirill\code\C#\Discord--minecraft-bot\discord-minecraft-ML-bot\bin\Debug\net9.0\config.yml
+edit Discord--minecraft-bot\discord-minecraft-ML-bot\bin\Debug\net9.0\config.yml
 
-dotnet run - start bot
-
-windows - install repository
+<h2>windows </h2>
+install repository
 edit Discord--minecraft-bot\discord-minecraft-ML-bot\bin\Release\net9.0\win-x64\publish\config.yml
 
 
@@ -28,4 +27,15 @@ name Colection - data
 
 use data.csv in configure as exemple
 
+<h1>How to start?</h1>
 
+<h2>Linux and macOS</h2>
+open console
+Go to the directory with the bot
+cd discord-minecraft-ML-bot/
+dotnet run
+
+<h2>Windows</h2>
+Go to the directory with the bot
+go to Discord--minecraft-bot\discord-minecraft-ML-bot\bin\Release\net9.0\win-x64\publish\
+run discord-minecraft-ML-bot.exe
