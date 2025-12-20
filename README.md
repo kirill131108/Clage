@@ -20,4 +20,8 @@ edit Discord--minecraft-bot\discord-minecraft-ML-bot\bin\Release\net9.0\win-x64\
 Install mongoDB compas - create a DB to localhost:27017
 name DB - test
 name Colection - data
+<img width="302" height="175" alt="image" src="https://github.com/user-attachments/assets/78b8a666-e10e-4b1a-8bd1-9a9afef01837" />
+
+use data.csv in configure as exemple
+
 
