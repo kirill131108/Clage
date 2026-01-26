@@ -11,7 +11,7 @@ go in discord-minecraft-ML-bot
 
 edit Discord--minecraft-bot\discord-minecraft-ML-bot\bin\Debug\net9.0\config.yml
 
-<h2>windows </h2>
+<h2>Windows </h2>
 install repository
 
 edit Discord--minecraft-bot\discord-minecraft-ML-bot\bin\Release\net9.0\win-x64\publish\config.yml
