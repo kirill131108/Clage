@@ -43,7 +43,7 @@ namespace Bot
                     Console.WriteLine("Is Duplicate");
                 }
                 if (channel != null) {};
-                // await channel.DeleteMessageAsync(messageID);
+                await channel.DeleteMessageAsync(messageID);
             } else if (result.Score <= -2)
             {
                 if (!hasDuplicate)
@@ -79,7 +79,7 @@ namespace Bot
 
             var dataProcessPipeLine = ctx.Transforms.Text.FeaturizeText(outputColumnName: "Features", inputColumnName: nameof(InputData.Message));
 
-            var training = ctx.BinaryClassification.Trainers.SdcaLogisticRegression(labelColumnName:"Label", featureColumnName:"Features");
+            var training = ctx.BinaryClassification.Trainers.AveragedPerceptron(labelColumnName:"Label", featureColumnName:"Features");
             var trainingPipeLine = dataProcessPipeLine.Append(training);
 
             ITransformer transformer = trainingPipeLine.Fit(trainer);

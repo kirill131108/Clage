@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\kirill\\code\\C#\\Discord--minecraft-bot\\discord-minecraft-ML-bot\\discord-minecraft-ML-bot.csproj": {}
+    "C:\\kirill\\code\\C#\\Clage\\discord-minecraft-ML-bot\\discord-minecraft-ML-bot.csproj": {}
   },
   "projects": {
-    "C:\\kirill\\code\\C#\\Discord--minecraft-bot\\discord-minecraft-ML-bot\\discord-minecraft-ML-bot.csproj": {
+    "C:\\kirill\\code\\C#\\Clage\\discord-minecraft-ML-bot\\discord-minecraft-ML-bot.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\kirill\\code\\C#\\Discord--minecraft-bot\\discord-minecraft-ML-bot\\discord-minecraft-ML-bot.csproj",
+        "projectUniqueName": "C:\\kirill\\code\\C#\\Clage\\discord-minecraft-ML-bot\\discord-minecraft-ML-bot.csproj",
         "projectName": "discord-minecraft-ML-bot",
-        "projectPath": "C:\\kirill\\code\\C#\\Discord--minecraft-bot\\discord-minecraft-ML-bot\\discord-minecraft-ML-bot.csproj",
+        "projectPath": "C:\\kirill\\code\\C#\\Clage\\discord-minecraft-ML-bot\\discord-minecraft-ML-bot.csproj",
         "packagesPath": "C:\\Users\\89529\\.nuget\\packages\\",
-        "outputPath": "C:\\kirill\\code\\C#\\Discord--minecraft-bot\\discord-minecraft-ML-bot\\obj\\",
+        "outputPath": "C:\\kirill\\code\\C#\\Clage\\discord-minecraft-ML-bot\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\89529\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\89529\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,7 +40,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -105,7 +107,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

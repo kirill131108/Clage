@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CI7YmiqKKmo=",
+  "dgSpecHash": "nvQY1R7iBXU=",
   "success": true,
-  "projectFilePath": "C:\\kirill\\code\\C#\\Discord--minecraft-bot\\discord-minecraft-ML-bot\\discord-minecraft-ML-bot.csproj",
+  "projectFilePath": "C:\\kirill\\code\\C#\\Clage\\discord-minecraft-ML-bot\\discord-minecraft-ML-bot.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\89529\\.nuget\\packages\\discord.net\\3.18.0\\discord.net.3.18.0.nupkg.sha512",
     "C:\\Users\\89529\\.nuget\\packages\\discord.net.commands\\3.18.0\\discord.net.commands.3.18.0.nupkg.sha512",
@@ -90,9 +90,9 @@
       "code": "NU1701",
       "level": "Warning",
       "message": "Пакет \"Redis 1.0.3\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\", а не целевой платформы проекта \"net9.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
-      "projectPath": "C:\\kirill\\code\\C#\\Discord--minecraft-bot\\discord-minecraft-ML-bot\\discord-minecraft-ML-bot.csproj",
+      "projectPath": "C:\\kirill\\code\\C#\\Clage\\discord-minecraft-ML-bot\\discord-minecraft-ML-bot.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\kirill\\code\\C#\\Discord--minecraft-bot\\discord-minecraft-ML-bot\\discord-minecraft-ML-bot.csproj",
+      "filePath": "C:\\kirill\\code\\C#\\Clage\\discord-minecraft-ML-bot\\discord-minecraft-ML-bot.csproj",
       "libraryId": "Redis",
       "targetGraphs": [
         "net9.0"
@@ -102,9 +102,9 @@
       "code": "NU1701",
       "level": "Warning",
       "message": "Пакет \"ServiceStack.Redis 4.0.62\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\", а не целевой платформы проекта \"net9.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
-      "projectPath": "C:\\kirill\\code\\C#\\Discord--minecraft-bot\\discord-minecraft-ML-bot\\discord-minecraft-ML-bot.csproj",
+      "projectPath": "C:\\kirill\\code\\C#\\Clage\\discord-minecraft-ML-bot\\discord-minecraft-ML-bot.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\kirill\\code\\C#\\Discord--minecraft-bot\\discord-minecraft-ML-bot\\discord-minecraft-ML-bot.csproj",
+      "filePath": "C:\\kirill\\code\\C#\\Clage\\discord-minecraft-ML-bot\\discord-minecraft-ML-bot.csproj",
       "libraryId": "ServiceStack.Redis",
       "targetGraphs": [
         "net9.0"
