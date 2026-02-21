@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\kirill\\code\\C#\\Clage\\discord-minecraft-ML-bot\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{20ACDB40-6C6F-92B8-E2D4-47B64875D223}|discord-minecraft-ML-bot.csproj|c:\\kirill\\code\\c#\\clage\\discord-minecraft-ml-bot\\logs\\loghandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20ACDB40-6C6F-92B8-E2D4-47B64875D223}|discord-minecraft-ML-bot.csproj|solutionrelative:logs\\loghandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{20ACDB40-6C6F-92B8-E2D4-47B64875D223}|discord-minecraft-ML-bot.csproj|c:\\kirill\\code\\c#\\clage\\discord-minecraft-ml-bot\\ml\\ml_model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20ACDB40-6C6F-92B8-E2D4-47B64875D223}|discord-minecraft-ML-bot.csproj|solutionrelative:ml\\ml_model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -22,11 +26,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "LogHandler.cs",
+              "DocumentMoniker": "C:\\kirill\\code\\C#\\Clage\\discord-minecraft-ML-bot\\Logs\\LogHandler.cs",
+              "RelativeDocumentMoniker": "Logs\\LogHandler.cs",
+              "ToolTip": "C:\\kirill\\code\\C#\\Clage\\discord-minecraft-ML-bot\\Logs\\LogHandler.cs",
+              "RelativeToolTip": "Logs\\LogHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T00:25:36.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "InteractionHandler.cs",
               "DocumentMoniker": "C:\\kirill\\code\\C#\\Clage\\discord-minecraft-ML-bot\\Commands\\InteractionHandler.cs",
               "RelativeDocumentMoniker": "Commands\\InteractionHandler.cs",
@@ -38,7 +55,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "InteractionModule.cs",
               "DocumentMoniker": "C:\\kirill\\code\\C#\\Clage\\discord-minecraft-ML-bot\\Commands\\InteractionModule.cs",
               "RelativeDocumentMoniker": "Commands\\InteractionModule.cs",
@@ -50,7 +67,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ML_model.cs",
               "DocumentMoniker": "C:\\kirill\\code\\C#\\Clage\\discord-minecraft-ML-bot\\ML\\ML_model.cs",
               "RelativeDocumentMoniker": "ML\\ML_model.cs",
