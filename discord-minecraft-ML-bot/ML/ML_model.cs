@@ -94,6 +94,7 @@ namespace Bot
             {
                 while(await time.WaitForNextTickAsync()) {
                     await ML_model.TrainModel("model.zip");
+                    return RunTrainModel;
                 }
             });
         }
