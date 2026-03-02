@@ -15,9 +15,12 @@ namespace Bot
             var dataBase = client.GetDatabase("test");
             var collection = dataBase.GetCollection<InputData>("data");
 
+            // convert data type for model
             var enumereable = collection.Find(_ => true).ToList();
+            // check for dublicate message
             var hasDuplicate = collection.Find(x => x.Message == message).Any();
 
+            //load model
             trainmodel = ctx.Model.Load("model.zip", out var schema);
 
             var predEngine = ctx.Model.CreatePredictionEngine<InputData, OutputData>(trainmodel);
@@ -30,12 +33,15 @@ namespace Bot
             
             var result = predEngine.Predict(context);
 
+            // check of the model
             Console.WriteLine(result.Score);
-
+            
+            // check for message.
             if (result.Score >= 2)
             {
                 if (!hasDuplicate)
                 {
+                    // add to bd
                     var resultInsert = dataBase.GetCollection<InputData>("data");
                     resultInsert.InsertOne(new InputData { Message = message, Label = false});
                 } else
@@ -48,14 +54,17 @@ namespace Bot
             {
                 if (!hasDuplicate)
                 {
+                    //add to db
                     var resultInsert = dataBase.GetCollection<InputData>("data");
                     resultInsert.InsertOne(new InputData { Message = message, Label = false});
                 }
-            } else
+            } 
+                // for o(n) algoritm
+            /* else
             {
                 hasDuplicate = false;
                 return;
-            }
+            } */
             await Task.CompletedTask;
         }
         public static async Task TrainModel(String path)
@@ -66,14 +75,16 @@ namespace Bot
 
             var enumereable = collection.Find(_ => true).ToList();
 
+
             var file = File.Exists("model.zip");
+            // check a model and load model
             if (file == true)
                 trainmodel = ctx.Model.Load(path, out var inputSchema);
 
             IDataView dataView = ctx.Data.LoadFromEnumerable<InputData>(enumereable);
 
             var trainsplitdata = ctx.Data.TrainTestSplit(dataView, 0.2);
-
+            //train model 
             IDataView trainer = trainsplitdata.TrainSet;
             IDataView trainer1 = trainsplitdata.TestSet;
 

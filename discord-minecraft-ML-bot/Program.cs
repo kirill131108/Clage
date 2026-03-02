@@ -88,7 +88,7 @@ namespace Bot
             await _client.LoginAsync(TokenType.Bot, config["tokens:discord"]);
             await _client.StartAsync();
 
-            Console.ReadLine();
+            while(Console.ReadKey(true) != ConsoleKey.Escape);
 
             await _client.StopAsync();
         }

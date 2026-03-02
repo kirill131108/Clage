@@ -1,0 +1,4 @@
+prefix: "!"
+testGuild: server ID
+tokens: 
+  discord: "token discord bot"
